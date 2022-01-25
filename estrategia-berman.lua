@@ -41,8 +41,8 @@ sec = security(current_ticker_id, "5m")
 
 if sec and sec.open_time == open_time then
   ssmaa = sma(close, '20')
-  upper_band = sma + (stdev(close, 20) * 2.5)
-  lower_band = sma - (stdev(close, 20) * 2.5)
+  upper_band = ssmaa + (stdev(close, 20) * 2.5)
+  lower_band = ssmaa - (stdev(close, 20) * 2.5)
   emaa = ema(close, '100')
   
   if exibir_tracamento == 1 then
